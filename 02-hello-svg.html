@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <meta charset="utf-8">
+    <title>D3 Hello SVG World!</title>
+      <style type="text/css">
+        circle {
+        stroke: #000;
+        fill-opacity: .5;
+        }
+    </style>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      // first thing we have to do is append an svg element to the body
+      // we also have to size it.
+      var svg =d3.select("body").append("svg")
+      .attr("height",50)
+      .attr("width",200);
+
+      // now we add a text element to the svg element
+      // we have to size it too.
+      svg.append("text")
+      .text("Hello, SVG world!")
+      .attr("x",0)
+      .attr("y",15);
+
+      // now let's draw a crude picture of the world because it's svg and we can
+      svg.append("circle")
+      .attr("cx",150)
+      .attr("cy",15)
+      .attr("fill","blue")
+      .attr("r",10);
+
+    </script>
+  </body>
+</html>
